@@ -1,67 +1,57 @@
-# 📋 Angular Form & Table App
-### Component-Based Data Entry and Display (Angular)
+# ✅ Angular Reactive Form — Profile Submission & Validation
 
-An **Angular single-page application** demonstrating **component interaction, form handling, and dynamic data display** using a clean, component-driven architecture.
+A focused **Angular** application built with **Reactive Forms** that collects user contact details, validates inputs with strict rules, and displays the submitted data in a clean summary table.
 
-This project focuses on core Angular concepts such as **data binding**, **component communication**, and **structured UI composition**, rather than visual complexity.
-
----
-
-## 🎯 Project Overview
-
-The application allows users to:
-- enter data through a form component,
-- submit and validate that data,
-- and display it dynamically inside a table component.
-
-The logic is split between clearly defined components, making the application easy to understand, test, and extend.
+This project showcases practical form engineering: strong validation, clear error messaging, and a simple multi-page flow.
 
 ---
 
 ## ✨ Features
 
-- ✅ Form-based data entry (`FormElementComponent`)
-- ✅ Dynamic table rendering (`TableElementComponent`)
-- ✅ Component-based Angular architecture
-- ✅ Angular routing setup
-- ✅ TypeScript-driven state handling
-- ✅ Unit test scaffolding for components
+- 🧾 Reactive form with:
+  - First Name (required)
+  - Last Name (required)
+  - Phone Number (optional, validated when provided)
+  - Email (validated with Angular email validator)
+- 🛡️ Validation rules:
+  - First/Last Name: **required**
+  - Phone (if provided):
+    - **exactly 10 digits**
+    - **1st and 4th digits are not `0`**
+  - Email: must match a **valid email pattern**
+- 🚦 Inline error messages for invalid input
+- 📄 On successful submit, navigates to a new page and renders the user data in a **table**
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - **Angular**
 - **TypeScript**
-- **HTML & CSS**
-- **Karma / Jasmine** (testing setup)
+- **Reactive Forms (FormBuilder, Validators)**
+- **HTML / CSS**
 
 ---
 
 ## 🚀 Run Locally
 
-### Install dependencies
 ```bash
 npm install
-```
-
-### Run the application
-```bash
 ng serve
 ```
 
-Then open:
-```
-http://localhost:4200
-```
+Open: `http://localhost:4200`
 
 ---
 
 ## 🧠 What This Project Demonstrates
 
-- Component-based UI design in Angular
-- Handling user input via forms
-- Passing and rendering data between components
-- Clean TypeScript logic inside Angular components
-- Understanding of Angular module and routing structure
+- Building robust **Reactive Forms**
+- Custom validation logic (phone rules beyond basic patterns)
+- UX-friendly form feedback (clear errors + valid submission flow)
+- Simple routing for multi-page submission → review experience
 
+
+---
+
+📌 *A clean Angular form project focused on validation quality and user feedback.*
